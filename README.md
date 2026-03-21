@@ -4,6 +4,7 @@ A modern, high-performance web dashboard for tracking **Honor of Kings (HoK)** h
 
 ![HOK Dashboard](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Tech](https://img.shields.io/badge/Tech-Python%20|%20Playwright%20|%20Vanilla%20JS-blue)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-blue)](https://lnsdeep.github.io/hok-meta-analyzer/)
 
 ## ✨ Key Features
 
