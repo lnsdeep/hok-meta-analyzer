@@ -452,9 +452,26 @@
 
                 if (metaRes.ok) {
                     const metaData = await metaRes.json();
-                    if (metaData.last_updated) {
+                    if (metaData.data_refresh_time) {
                         const badge = document.getElementById('lastUpdated');
-                        badge.textContent = `Last Updated: ${metaData.last_updated}`;
+                        
+                        // 1. Convert UTC to the visitor's local time
+                        const lastUpdatedDate = new Date(metaData.data_refresh_time);
+                        const localTimeString = lastUpdatedDate.toLocaleString(undefined, { 
+                            month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' 
+                        });
+
+                        // 2. Calculate time until the next Midnight UTC
+                        const now = new Date();
+                        const nextUpdate = new Date();
+                        nextUpdate.setUTCHours(24, 0, 0, 0); // Sets to next midnight UTC
+                        
+                        const diffMs = nextUpdate - now;
+                        const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
+                        const diffMins = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+
+                        // 3. Display it!
+                        badge.innerHTML = `Updated: ${localTimeString} &nbsp;|&nbsp; Next Update: ${diffHrs}h ${diffMins}m`;
                         badge.style.display = 'inline-flex';
                     }
                 }
