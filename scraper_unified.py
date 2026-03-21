@@ -7,6 +7,11 @@ import random
 from datetime import datetime
 from playwright.async_api import async_playwright
 
+# Data Credits:
+# 1. English Hero Names / Epithets: https://liquipedia.net/honorofkings/
+# 2. Hero Meta Stats / Metrics: https://camp.honorofkings.com/
+
+
 # Extensive mapping for Global names -> Liquipedia URL paths
 # If a hero keeps returning blank, add their global name and Liquipedia page name here.
 MANUAL_MAPPINGS = {
