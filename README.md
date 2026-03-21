@@ -19,7 +19,7 @@ A modern, high-performance web dashboard for tracking **Honor of Kings (HoK)** h
 This project aggregates data from these primary sources:
 
 1.  **[Liquipedia Honor of Kings](https://liquipedia.net/honorofkings/)**: Used to fetch the official English hero names and epithets. Huge thanks to the Liquipedia community for their documentation!
-2.  **[Camp HOK (King's Camp)](https://camp.hok.qq.com/)**: The official Tencent source for real-time hero data, metrics, and profile details.
+2.  **[Camp HOK (King's Camp)](https://camp.honorofkings.com/h5/app/index.html)**: The official Tencent source for real-time hero data, metrics, and profile details.
 
 ## 🚀 Getting Started
 
