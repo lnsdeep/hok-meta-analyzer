@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Roster & Meta Analyzer</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-hover: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --border: #334155;
+            --win-high: #22c55e;
+            --win-low: #ef4444;
+            --tier-s: #fbbf24;
+            /* Amber/Gold */
+            --tier-a: #ef4444;
+            /* Red */
+            --tier-b: #a855f7;
+            /* Purple */
+            --tier-c: #3b82f6;
+            /* Blue */
+            --tier-d: #64748b;
+            /* Slate */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        input,
+        select {
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-color);
+            color: var(--text-main);
+            font-size: 14px;
+            outline: none;
+            min-width: 150px;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: var(--accent);
+        }
+
+        /* Table Styles */
+        .table-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-x: auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th,
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: #0b1120;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        tbody tr {
+            transition: background-color 0.2s;
+        }
+
+        tbody tr:hover {
+            background-color: var(--card-hover);
+        }
+
+        /* Hero Cell Profile */
+        .hero-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid var(--border);
+        }
+
+        .hero-names {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-name-en {
+            font-weight: bold;
+            font-size: 16px;
+            color: var(--text-main);
+        }
+
+        .hero-name-cn {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Metadata Badge */
+        .metadata-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 8px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+
+        /* Value Colors */
+        .val-high {
+            color: var(--win-high);
+            font-weight: bold;
+        }
+
+        .val-low {
+            color: var(--win-low);
+            font-weight: bold;
+        }
+
+        /* Tier Badge */
+        .tier-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            min-width: 30px;
+            color: #1e293b;
+            /* Dark text for contrast against bright badges */
+        }
+
+        .action-btn {
+            padding: 8px 16px;
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            transition: all 0.2s ease;
+            display: inline-block;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .action-btn:hover {
+            background-color: var(--accent);
+            color: white;
+        }
+
+        .action-btn:active {
+            transform: scale(0.96);
+        }
+
+        .error-message {
+            display: none;
+            text-align: center;
+            color: #ef4444;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Mobile Responsive Overrides */
+        @media (max-width: 768px) {
+            .table-container {
+                background: transparent;
+                border: none;
+                padding: 0;
+            }
+
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tbody tr {
+                background: var(--card-bg);
+                border-radius: 16px;
+                margin-bottom: 20px;
+                padding: 16px;
+                border: 1px solid var(--border);
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px 12px;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
+
+            td {
+                border: none;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                text-align: left;
+                min-width: 0;
+                /* Prevent horizontal overflow */
+            }
+
+            /* Header Section: Hero Profile */
+            td:first-child {
+                grid-column: span 3;
+                padding-bottom: 12px;
+                border-bottom: 1px solid var(--border);
+                margin-bottom: 4px;
+            }
+
+            /* Footer Section: View Profile Button */
+            td:last-child {
+                grid-column: span 3;
+                margin-top: 8px;
+            }
+
+            /* Stat Labels (Stacked) */
+            td:not(:first-child):not(:last-child)::before {
+                content: attr(data-label);
+                font-weight: 700;
+                color: var(--text-muted);
+                font-size: 10px;
+                text-transform: uppercase;
+                margin-bottom: 4px;
+                letter-spacing: 0.05em;
+                white-space: nowrap;
+            }
+
+            /* Vertical Centering for Names and Avatar */
+            .hero-profile {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 14px;
+            }
+
+            .hero-avatar {
+                width: 52px;
+                height: 52px;
+                border-radius: 10px;
+            }
+
+            .hero-name-en {
+                font-size: 18px;
+                line-height: 1.2;
+            }
+
+            .hero-name-cn {
+                font-size: 13px;
+                margin-top: 1px;
+            }
+
+            /* Centered Pill Action Button */
+            .action-btn {
+                width: auto;
+                min-width: 180px;
+                padding: 10px 24px;
+                background: rgba(59, 130, 246, 0.12);
+                color: #60a5fa;
+                border: none;
+                border-radius: 100px;
+                /* Pill shape */
+                font-weight: 700;
+                font-size: 14px;
+                letter-spacing: 0.3px;
+                margin: 16px auto 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+                text-decoration: none;
+                transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            .action-btn::after {
+                content: '→';
+                font-size: 16px;
+                transition: transform 0.2s ease;
+            }
+
+            .action-btn:hover {
+                background-color: rgba(59, 130, 246, 0.2);
+                color: white;
+            }
+
+            .action-btn:hover::after {
+                transform: translateX(4px);
+            }
+
+            .action-btn:active {
+                transform: scale(0.96);
+                background-color: rgba(59, 130, 246, 0.3);
+            }
+
+            /* Adjust Tier Badge for Grid density */
+            .tier-badge {
+                font-size: 12px;
+                padding: 2px 8px;
+                min-width: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hero Meta Database</h1>
+        <div id="lastUpdated" class="metadata-badge" style="display: none;"></div>
+    </header>
+
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search hero name...">
+
+        <select id="roleFilter">
+            <option value="all">All Roles</option>
+        </select>
+
+        <select id="laneFilter">
+            <option value="all">All Lanes</option>
+        </select>
+
+        <select id="sortSelect">
+            <option value="tier_desc">Tier (S to D)</option>
+            <option value="win_desc">Win Rate (High to Low)</option>
+            <option value="pick_desc">Pick Rate (High to Low)</option>
+            <option value="ban_desc">Ban Rate (High to Low)</option>
+            <option value="name_asc">Name (A-Z)</option>
+        </select>
+    </div>
+
+    <div id="errorMessage" class="error-message">
+        Could not load heroes.json. Make sure you are running a local server (e.g.,
+        <code>python -m http.server 8000</code>) and that the file exists in the same directory.
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Hero</th>
+                    <th>Role</th>
+                    <th>Lane</th>
+                    <th>Tier</th>
+                    <th>Win Rate</th>
+                    <th>Pick Rate</th>
+                    <th>Ban Rate</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody id="heroTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let heroesData = [];
+
+        const tableBody = document.getElementById('heroTableBody');
+        const searchInput = document.getElementById('searchInput');
+        const roleFilter = document.getElementById('roleFilter');
+        const laneFilter = document.getElementById('laneFilter');
+        const sortSelect = document.getElementById('sortSelect');
+        const errorMessage = document.getElementById('errorMessage');
+
+        async function init() {
+            try {
+                // Initialize filters from URL
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.has('search')) searchInput.value = urlParams.get('search');
+                if (urlParams.has('role')) roleFilter.value = urlParams.get('role');
+                if (urlParams.has('lane')) laneFilter.value = urlParams.get('lane');
+                if (urlParams.has('sort')) sortSelect.value = urlParams.get('sort');
+
+                // Parallel fetch heroes and metadata
+                const [heroesRes, metaRes] = await Promise.all([
+                    fetch('heroes.json'),
+                    fetch('metadata.json')
+                ]);
+
+                if (!heroesRes.ok) throw new Error('Hero data load failed');
+                heroesData = await heroesRes.json();
+
+                if (metaRes.ok) {
+                    const metaData = await metaRes.json();
+                    if (metaData.last_updated) {
+                        const badge = document.getElementById('lastUpdated');
+                        badge.textContent = `Last Updated: ${metaData.last_updated}`;
+                        badge.style.display = 'inline-flex';
+                    }
+                }
+
+                populateDropdowns();
+
+                // Set dropdown values again after populating (in case they were in URL)
+                if (urlParams.has('role')) roleFilter.value = urlParams.get('role');
+                if (urlParams.has('lane')) laneFilter.value = urlParams.get('lane');
+
+                renderTable(false); // Initial render without pushing state
+            } catch (error) {
+                console.error("Error loading JSON:", error);
+                errorMessage.style.display = 'block';
+                document.querySelector('.table-container').style.display = 'none';
+            }
+        }
+
+        function updateURL() {
+            const params = new URLSearchParams();
+            if (searchInput.value) params.set('search', searchInput.value);
+            if (roleFilter.value !== 'all') params.set('role', roleFilter.value);
+            if (laneFilter.value !== 'all') params.set('lane', laneFilter.value);
+            if (sortSelect.value !== 'tier_desc') params.set('sort', sortSelect.value);
+
+            const newUrl = `${window.location.pathname}${params.toString() ? '?' + params.toString() : ''}`;
+            window.history.pushState({}, '', newUrl);
+        }
+
+        function populateDropdowns() {
+            const rolesSet = new Set();
+            const lanesSet = new Set();
+
+            heroesData.forEach(hero => {
+                if (hero.roles) hero.roles.split(',').forEach(r => rolesSet.add(r.trim()));
+                if (hero.recommended_lane) lanesSet.add(hero.recommended_lane.trim());
+            });
+
+            [...rolesSet].sort().forEach(role => {
+                if (!role) return;
+                roleFilter.appendChild(new Option(role, role));
+            });
+
+            [...lanesSet].sort().forEach(lane => {
+                if (!lane) return;
+                laneFilter.appendChild(new Option(lane, lane));
+            });
+        }
+
+        // 🛡️ BULLETPROOF PARSING: Strips invisible characters, letters, and symbols
+        function parsePercent(str) {
+            if (!str) return 0;
+            // Removes everything except digits (0-9), decimals (.), and minus signs (-)
+            const cleanedStr = String(str).replace(/[^\d.-]/g, '');
+            const num = parseFloat(cleanedStr);
+            return isNaN(num) ? 0 : num;
+        }
+
+        function getTierInfo(popularity) {
+            const map = {
+                'S': { letter: 'S', color: 'var(--tier-s)' },
+                'A': { letter: 'A', color: 'var(--tier-a)' },
+                'B': { letter: 'B', color: 'var(--tier-b)' },
+                'C': { letter: 'C', color: 'var(--tier-c)' },
+                'D': { letter: 'D', color: 'var(--tier-d)' },
+            };
+            return map[popularity] || { letter: popularity !== 'N/A' ? popularity : '-', color: '#475569' };
+        }
+
+        function renderTable(pushState = true) {
+            const searchTerm = searchInput.value.toLowerCase();
+            const selectedRole = roleFilter.value;
+            const selectedLane = laneFilter.value;
+            const sortVal = sortSelect.value;
+
+            if (pushState) updateURL();
+
+            // 1. Filter
+            let filtered = heroesData.filter(hero => {
+                const searchStr = (hero.chinese_hero_name + " " + (hero.english_hero_name || "")).toLowerCase();
+                const matchesSearch = searchStr.includes(searchTerm);
+                const matchesRole = selectedRole === 'all' || (hero.roles && hero.roles.includes(selectedRole));
+                const matchesLane = selectedLane === 'all' || hero.recommended_lane === selectedLane;
+                return matchesSearch && matchesRole && matchesLane;
+            });
+
+            // 2. Sort (With Tie-Breakers built-in!)
+            filtered.sort((a, b) => {
+                if (sortVal === 'name_asc') {
+                    return (a.english_hero_name || a.chinese_hero_name).localeCompare(b.english_hero_name || b.chinese_hero_name);
+                }
+                if (sortVal === 'win_desc') {
+                    return parsePercent(b.win_rate) - parsePercent(a.win_rate) || parsePercent(b.pick_rate) - parsePercent(a.pick_rate);
+                }
+                if (sortVal === 'pick_desc') {
+                    return parsePercent(b.pick_rate) - parsePercent(a.pick_rate) || parsePercent(b.win_rate) - parsePercent(a.win_rate);
+                }
+                if (sortVal === 'ban_desc') {
+                    return parsePercent(b.ban_rate) - parsePercent(a.ban_rate) || parsePercent(b.win_rate) - parsePercent(a.win_rate);
+                }
+                if (sortVal === 'tier_desc') {
+                    const getTierScore = (pop) => {
+                        const scores = { 'S': 0, 'A': 1, 'B': 2, 'C': 3, 'D': 4 };
+                        return scores[pop] ?? 99;
+                    };
+                    const tierDiff = getTierScore(a.popularity) - getTierScore(b.popularity);
+                    // Tie breaker: If heroes are the same Tier, sort them by Win Rate
+                    return tierDiff !== 0 ? tierDiff : (parsePercent(b.win_rate) - parsePercent(a.win_rate));
+                }
+                return 0;
+            });
+
+            // 3. Render
+            tableBody.innerHTML = filtered.map(hero => {
+                const winNum = parsePercent(hero.win_rate);
+                const winClass = winNum >= 51 ? 'val-high' : (winNum <= 49 ? 'val-low' : '');
+                const tierInfo = getTierInfo(hero.popularity);
+
+                return `
+                <tr>
+                    <td>
+                        <div class="hero-profile">
+                            <img class="hero-avatar" src="${hero.image_url}" alt="${hero.english_hero_name || hero.chinese_hero_name}" loading="lazy">
+                            <div class="hero-names">
+                                <span class="hero-name-en">${hero.english_hero_name || 'Unknown Hero'}</span>
+                                <span class="hero-name-cn">${hero.chinese_hero_name}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td data-label="Role"><span style="color: var(--text-muted);">${hero.roles || '-'}</span></td>
+                    <td data-label="Lane"><span style="color: var(--text-muted);">${hero.recommended_lane || '-'}</span></td>
+                    <td data-label="Tier">
+                        <span class="tier-badge" style="background-color: ${tierInfo.color};">
+                            ${tierInfo.letter}
+                        </span>
+                    </td>
+                    <td data-label="Win Rate" class="${winClass}">${hero.win_rate}</td>
+                    <td data-label="Pick Rate">${hero.pick_rate}</td>
+                    <td data-label="Ban Rate">${hero.ban_rate}</td>
+                    <td data-label="Details">
+                        <a href="${hero.hero_page_url}" target="_blank" class="action-btn">View Profile</a>
+                    </td>
+                </tr>
+            `}).join('');
+        }
+
+        // Event Listeners
+        searchInput.addEventListener('input', renderTable);
+        roleFilter.addEventListener('change', renderTable);
+        laneFilter.addEventListener('change', renderTable);
+        sortSelect.addEventListener('change', renderTable);
+
+        // Run
+        init();
+    </script>
+</body>
+
+</html>
