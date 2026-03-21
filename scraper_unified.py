@@ -263,6 +263,24 @@ async def scrape_all():
                 writer.writerows(processed_heroes)
 
             print(f"Done! Saved {len(processed_heroes)} heroes to json and csv.")
+
+            # --- ADD THIS NEW METADATA BLOCK ---
+            from datetime import timezone
+            
+            # GitHub Actions runs in UTC, so we will format the time accordingly
+            now = datetime.now()
+            utc_now = datetime.now(timezone.utc)
+            
+            metadata_content = {
+                "last_updated": now.strftime("%Y-%m-%d %H:%M:%S"),
+                "data_refresh_time": utc_now.strftime("%Y-%m-%dT%H:%M:%SZ")
+            }
+            
+            with open("metadata.json", "w", encoding="utf-8") as f:
+                json.dump(metadata_content, f, indent=4)
+                
+            print("Updated metadata.json with latest timestamps.")
+            # -----------------------------------
         
         await browser.close()
 
