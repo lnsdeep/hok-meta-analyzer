@@ -19,8 +19,7 @@ A modern, high-performance web dashboard for tracking **Honor of Kings (HoK)** h
 
 This project aggregates data from these primary sources:
 
-1.  **[Liquipedia Honor of Kings](https://liquipedia.net/honorofkings/)**: Used to fetch the official English hero names and epithets. Huge thanks to the Liquipedia community for their documentation!
-2.  **[Camp HOK (King's Camp)](https://camp.honorofkings.com/h5/app/index.html)**: The official Tencent source for real-time hero data, metrics, and profile details.
+1.  **[Camp HOK (King's Camp)](https://camp.honorofkings.com/h5/app/index.html)**: The official Tencent source for real-time hero data, metrics, and profile details.
 
 ## 🚀 Getting Started
 
@@ -45,7 +44,7 @@ Then visit: `http://localhost:8000`
 
 ## 📂 Project Structure
 
-*   `scraper_unified.py`: The core engine that scrapes both Liquipedia and Camp HOK concurrently.
+*   `scraper_unified.py`: The core engine that scrapes Camp HOK and matches with local hero mappings.
 *   `index.html`: The main dashboard frontend (HTML/CSS/JS).
 *   `heroes.json`: The generated database of hero info.
 *   `metadata.json`: Stores the "Last Updated" timestamp.

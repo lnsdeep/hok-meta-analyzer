@@ -8,60 +8,24 @@ from datetime import datetime
 from playwright.async_api import async_playwright
 
 # Data Credits:
-# 1. English Hero Names / Epithets: https://liquipedia.net/honorofkings/
-# 2. Hero Meta Stats / Metrics: https://camp.honorofkings.com/
+# 1. Hero Meta Stats / Metrics: https://camp.honorofkings.com/
 
-
-# Extensive mapping for Global names -> Liquipedia URL paths
-# If a hero keeps returning blank, add their global name and Liquipedia page name here.
-MANUAL_MAPPINGS = {
-    "Consort Yu": "Consort_Yu",
-    "Donghuang": "Donghuang",
-    "Arli": "Arli",
-    "Ming": "Ming_Shiyin",
-    "Prince of Lanling": "Lanling_Wang",
-    "Wuyan": "Wuyan",
-    "Lam": "Lam",
-    "Lady Zhen": "Zhen_Ji",
-    "Princess Frost": "Wang_Zhaojun",
-    "Master Lu": "Master_Luban",
-    "Doria": "Dolia",
-    "Kui": "Kui",
-    "Liang": "Zhang_Liang",
-    "Menki": "Menki",
-    "Fang": "Fang",
-    "Biron": "Biron",
-    "Wukong": "Sun_Wukong",
-    "Musashi": "Musashi",
-    "Dr Bian": "Dr_Bian",
-    "Gao": "Gao",
-    "Yango": "Yango",
-    "Cirrus": "Yun_Zhongjun",
-    "Arke": "A_Ke",
-    "Flowborn (Tank)": "Flowborn/Tank",
-    "Flowborn (Marksman)": "Flowborn/Marksman",
-    "Flowborn (Mage)": "Flowborn/Mage",
-    "Niumo": "Toro_(Honor_of_Kings)",
-    "Shangguan": "Shangguan",
-    "Pei": "Pei",
-    "Kongming": "Kongming",
-    "Shouyue": "Shouyue",
-    "Xuance": "Xuance",
-    "Yuhuan": "Yuhuan",
-    "Haya": "Hai_Yue",
-    "Mayene": "Ji_Xiaoman",
-    "Ying": "Ying",
-    "Jing": "Jing",
-    "Shi": "Shi", # User confirmed https://liquipedia.net/honorofkings/Shi
-    "Lady Sun": "Lady_Sun",
-    "Dun": "Dun",
-    "Zilong": "Zilong",
-    "Mozi": "Mozi",
-    "Garo": "Garo",
-    "Arthur": "Arthur_(Honor_of_Kings)",
-    "Diaochan": "Diaochan_(Honor_of_Kings)",
-    "Lu Bu": "Lu_Bu_(Honor_of_Kings)"
-}
+def load_local_mappings(csv_path="hero_mappings.csv"):
+    mappings = {}
+    if os.path.exists(csv_path):
+        try:
+            with open(csv_path, "r", encoding="utf-8-sig") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    ch_name = row.get("Chinese Name", "").strip()
+                    en_name = row.get("English Name", "").strip()
+                    if ch_name:
+                        mappings[ch_name] = en_name
+        except Exception as e:
+            print(f"Error loading local mappings: {e}")
+    else:
+        print(f"Warning: {csv_path} not found.")
+    return mappings
 
 async def safe_goto(page, url, retries=3, initial_delay=2, custom_headers=None):
     """Navigates to a URL with retry logic and exponential backoff."""
@@ -85,46 +49,10 @@ async def safe_goto(page, url, retries=3, initial_delay=2, custom_headers=None):
             await asyncio.sleep(delay)
     return None
 
-async def get_liquipedia_mappings(context):
-    """Scrapes the Liquipedia Portal:Heroes page to build a Global Name -> Wiki Path mapping."""
-    page = await context.new_page()
-    url = "https://liquipedia.net/honorofkings/Portal:Heroes"
-    print(f"Fetching hero mappings from {url}...")
-    
-    mappings = {}
-    try:
-        # Use retry logic for the portal too
-        success = await safe_goto(page, url)
-        if not success:
-            return mappings
+# get_liquipedia_mappings removed
 
-        # Find all hero links in the portal tables
-        links = await page.locator('.wiki-table a').all()
-        for link in links:
-            name = (await link.inner_text()).strip()
-            href = await link.get_attribute('href')
-            if name and href and '/honorofkings/' in href:
-                path = href.split('/honorofkings/')[-1]
-                mappings[name] = path
-        
-        # Also check the list items if tables don't cover everything
-        list_links = await page.locator('li a').all()
-        for link in list_links:
-            name = (await link.inner_text()).strip()
-            href = await link.get_attribute('href')
-            if name and href and '/honorofkings/' in href and name not in mappings:
-                path = href.split('/honorofkings/')[-1]
-                mappings[name] = path
-                
-        print(f"Built mapping for {len(mappings)} heroes from portal.")
-    except Exception as e:
-        print(f"Error building dynamic mapping: {e}")
-    finally:
-        await page.close()
-    return mappings
-
-async def process_hero(semaphore, context, h, idx, total, liquipedia_map):
-    """Processes a single hero: fetches metrics from Camp and metadata from Liquipedia."""
+async def process_hero(semaphore, context, h, idx, total, local_mappings):
+    """Processes a single hero: fetches metrics from Camp and uses local CSV mapping for English names."""
     async with semaphore:
         hero_id = h.get("heroId")
         name = h.get("heroName")
@@ -161,45 +89,12 @@ async def process_hero(semaphore, context, h, idx, total, liquipedia_map):
         except Exception as e:
             print(f"  [!] Failed metrics for {name}: {e}")
 
-        # -- 2. Scrape Liquipedia for Epithet --
-        url_path = MANUAL_MAPPINGS.get(name) or liquipedia_map.get(name) or name.replace(" ", "_").replace("'", "%27")
-        liq_url = f"https://liquipedia.net/honorofkings/{url_path}"
+        # -- 2. Lookup English Epithet --
+        epithet = local_mappings.get(name, "")
+        hero_obj["english_hero_name"] = epithet
         
-        # Liquipedia specific headers
-        liq_headers = {
-            "User-Agent": "HOK-Scraper-Bot/1.0 (Contact: user@example.com) " + 
-                          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-        }
-
-        try:
-            # Navigate to Liquipedia using retry logic and custom headers
-            success = await safe_goto(page, liq_url, custom_headers=liq_headers)
-            
-            if success:
-                candidate_texts = []
-                # Check headers (usually the 2nd header is the epithet)
-                headers = await page.locator('.infobox-header-2').all_inner_texts()
-                candidate_texts.extend(headers)
-                
-                # Also check descriptions but be careful of labels
-                descriptions = await page.locator('.infobox-description').all_inner_texts()
-                candidate_texts.extend(descriptions)
-                
-                ignore_list = ["General Information", "Esports Statistics", "Abilities", "Strategy", "History", "Trivia", "External Links", "Overview", "Lane", "Role"]
-                
-                for text in candidate_texts:
-                    clean_text = text.strip()
-                    if not clean_text or clean_text in ignore_list: continue
-                    if clean_text.endswith(':'): continue
-                    if clean_text.lower() in [i.lower() for i in ignore_list]: continue
-                    
-                    hero_obj["english_hero_name"] = clean_text
-                    break
-        except Exception as e:
-            print(f"  [!] Failed Liquipedia for {name}: {e}")
-        finally:
-            await page.close()
-            print(f"[{idx+1}/{total}] Completed {name}.")
+        await page.close()
+        print(f"[{idx+1}/{total}] Completed {name}.")
             
         return hero_obj
 
@@ -212,8 +107,8 @@ async def scrape_all():
             viewport={'width': 1280, 'height': 800}
         )
         
-        # 1. Build initial mappings from Portal
-        liquipedia_map = await get_liquipedia_mappings(context)
+        # 1. Load local mappings
+        local_mappings = load_local_mappings("hero_mappings.csv")
         
         # 2. Get the base list of heroes from the Camp site
         page = await context.new_page()
@@ -250,7 +145,7 @@ async def scrape_all():
         semaphore = asyncio.Semaphore(5)
         tasks = []
         for i, h in enumerate(raw_list):
-            tasks.append(process_hero(semaphore, context, h, i, len(raw_list), liquipedia_map))
+            tasks.append(process_hero(semaphore, context, h, i, len(raw_list), local_mappings))
         
         processed_heroes = await asyncio.gather(*tasks)
 
