@@ -548,7 +548,7 @@
     {
         "id": 137,
         "chinese_hero_name": "Sima Yi",
-        "english_hero_name": "Shadowreaper",
+        "english_hero_name": "",
         "roles": "Assassin, Mage",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/sU3BsR6P.png",
@@ -561,7 +561,7 @@
     {
         "id": 139,
         "chinese_hero_name": "Fuzi",
-        "english_hero_name": "Wise Sage",
+        "english_hero_name": "",
         "roles": "Fighter",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/UhQkVUBi.png",
@@ -574,7 +574,7 @@
     {
         "id": 162,
         "chinese_hero_name": "Nakoruru",
-        "english_hero_name": "Hawk Whisperer",
+        "english_hero_name": "",
         "roles": "Assassin",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/H9WAmWdN.png",
@@ -587,7 +587,7 @@
     {
         "id": 157,
         "chinese_hero_name": "Mai Shiranui",
-        "english_hero_name": "Fireninja",
+        "english_hero_name": "",
         "roles": "Assassin, Mage",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/4jaM0F19.png",
@@ -600,7 +600,7 @@
     {
         "id": 140,
         "chinese_hero_name": "Guan Yu",
-        "english_hero_name": "War Saint",
+        "english_hero_name": "",
         "roles": "Fighter",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/V5e2k18Z.png",
@@ -613,7 +613,7 @@
     {
         "id": 146,
         "chinese_hero_name": "Luna",
-        "english_hero_name": "Moonblade",
+        "english_hero_name": "",
         "roles": "Fighter, Mage",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/hz3BqNue.png",
@@ -639,7 +639,7 @@
     {
         "id": 141,
         "chinese_hero_name": "Diaochan",
-        "english_hero_name": "Lotusdancer",
+        "english_hero_name": "",
         "roles": "Mage",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/qFBebEbk.png",
@@ -652,7 +652,7 @@
     {
         "id": 142,
         "chinese_hero_name": "Angela",
-        "english_hero_name": "Scorchette",
+        "english_hero_name": "",
         "roles": "Mage",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/wjaExUFU.png",
@@ -665,7 +665,7 @@
     {
         "id": 154,
         "chinese_hero_name": "Mulan",
-        "english_hero_name": "Ironbloom",
+        "english_hero_name": "",
         "roles": "Fighter, Assassin",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/p4dfuWXS.png",
@@ -678,7 +678,7 @@
     {
         "id": 149,
         "chinese_hero_name": "Liu Bang",
-        "english_hero_name": "Dominant Ruler",
+        "english_hero_name": "",
         "roles": "Tank, Mage",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/bVHGeH45.png",
@@ -691,7 +691,7 @@
     {
         "id": 533,
         "chinese_hero_name": "Agudo",
-        "english_hero_name": "Wild Rider",
+        "english_hero_name": "",
         "roles": "Marksman",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/TYN9rh81.png",
@@ -704,7 +704,7 @@
     {
         "id": 152,
         "chinese_hero_name": "Wang Zhaojun",
-        "english_hero_name": "Princess Frost",
+        "english_hero_name": "",
         "roles": "Mage",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/lhZtGJlg.png",
@@ -717,7 +717,7 @@
     {
         "id": 155,
         "chinese_hero_name": "Erin",
-        "english_hero_name": "Laurel Princess",
+        "english_hero_name": "",
         "roles": "Marksman",
         "recommended_lane": "Farm Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/joVNQWhw.png",
@@ -730,7 +730,7 @@
     {
         "id": 178,
         "chinese_hero_name": "Yang Jian",
-        "english_hero_name": "Trilight",
+        "english_hero_name": "",
         "roles": "Fighter",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/LntokS4z.png",
@@ -743,7 +743,7 @@
     {
         "id": 173,
         "chinese_hero_name": "Fang",
-        "english_hero_name": "Private Ear",
+        "english_hero_name": "",
         "roles": "Marksman",
         "recommended_lane": "Farm Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/6dGNjKTe.png",
@@ -756,7 +756,7 @@
     {
         "id": 156,
         "chinese_hero_name": "Liang",
-        "english_hero_name": "Tomemaster",
+        "english_hero_name": "",
         "roles": "Mage",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/cNugkXGO.png",
@@ -769,7 +769,7 @@
     {
         "id": 514,
         "chinese_hero_name": "Allain",
-        "english_hero_name": "Reminiscence Blades (AoV) / Forgotten Blade (HoK)",
+        "english_hero_name": "",
         "roles": "Fighter",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/Ek9OHopQ.png",
@@ -782,7 +782,7 @@
     {
         "id": 163,
         "chinese_hero_name": "Ukyo Tachibana",
-        "english_hero_name": "Swift Strike",
+        "english_hero_name": "",
         "roles": "Assassin, Fighter",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/8e9WRFgL.png",
@@ -795,7 +795,7 @@
     {
         "id": 180,
         "chinese_hero_name": "Nezha",
-        "english_hero_name": "Wild Spark",
+        "english_hero_name": "",
         "roles": "Fighter, Tank",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/WDh84DWg.png",
@@ -808,7 +808,7 @@
     {
         "id": 167,
         "chinese_hero_name": "Wukong",
-        "english_hero_name": "Monkey King",
+        "english_hero_name": "",
         "roles": "Assassin",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/Go3mMeu4.png",
@@ -821,7 +821,7 @@
     {
         "id": 168,
         "chinese_hero_name": "Lapulapu",
-        "english_hero_name": "Reefheart Datu",
+        "english_hero_name": "",
         "roles": "Support, Tank",
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/camp/admin/default/AuWJ7G0J.png",
@@ -834,7 +834,7 @@
     {
         "id": 171,
         "chinese_hero_name": "Zhang Fei",
-        "english_hero_name": "The Beast",
+        "english_hero_name": "",
         "roles": "Support, Tank",
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/w0QS7N1L.png",
@@ -847,7 +847,7 @@
     {
         "id": 175,
         "chinese_hero_name": "Kui",
-        "english_hero_name": "Voidcaller",
+        "english_hero_name": "",
         "roles": "Support, Mage",
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/wRGzV266.png",
@@ -860,7 +860,7 @@
     {
         "id": 176,
         "chinese_hero_name": "Yuhuan",
-        "english_hero_name": "Tunecaster",
+        "english_hero_name": "",
         "roles": "Mage",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/r97AVgaV.png",
@@ -873,7 +873,7 @@
     {
         "id": 177,
         "chinese_hero_name": "Chano",
-        "english_hero_name": "Packleader",
+        "english_hero_name": "",
         "roles": "Marksman",
         "recommended_lane": "Farm Lane",
         "image_url": "https://camp.honorofkings.com/camp/admin/default/sJURXorM.png",
@@ -886,7 +886,7 @@
     {
         "id": 503,
         "chinese_hero_name": "Biron",
-        "english_hero_name": "Sparkmace",
+        "english_hero_name": "",
         "roles": "Fighter, Tank",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/F3A0JkoT.png",
@@ -899,7 +899,7 @@
     {
         "id": 179,
         "chinese_hero_name": "Nuwa",
-        "english_hero_name": "Celestial",
+        "english_hero_name": "",
         "roles": "Mage",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/E39kxNsD.png",
@@ -912,7 +912,7 @@
     {
         "id": 183,
         "chinese_hero_name": "Athena",
-        "english_hero_name": "Sacred Warrior",
+        "english_hero_name": "",
         "roles": "Fighter, Assassin",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/BEh6QC3Q.png",
@@ -925,7 +925,7 @@
     {
         "id": 193,
         "chinese_hero_name": "Kaizer",
-        "english_hero_name": "Demonplate",
+        "english_hero_name": "",
         "roles": "Fighter, Tank",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/xUdtJiLO.png",
@@ -938,7 +938,7 @@
     {
         "id": 184,
         "chinese_hero_name": "Cai Yan",
-        "english_hero_name": "Healing Tone",
+        "english_hero_name": "",
         "roles": "Support",
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/kQXkW7ab.png",
@@ -951,7 +951,7 @@
     {
         "id": 198,
         "chinese_hero_name": "Menki",
-        "english_hero_name": "Dream Spirit",
+        "english_hero_name": "",
         "roles": "Fighter, Mage",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/Ym7KcrIW.png",
@@ -964,7 +964,7 @@
     {
         "id": 187,
         "chinese_hero_name": "Donghuang",
-        "english_hero_name": "Harbinger",
+        "english_hero_name": "",
         "roles": "Support, Tank",
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/PRcq49iS.png",
@@ -977,7 +977,7 @@
     {
         "id": 189,
         "chinese_hero_name": "Guiguzi",
-        "english_hero_name": "Animist",
+        "english_hero_name": "",
         "roles": "Support",
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/AXjJlMvi.png",
@@ -990,7 +990,7 @@
     {
         "id": 195,
         "chinese_hero_name": "Xuance",
-        "english_hero_name": "Madlash",
+        "english_hero_name": "",
         "roles": "Assassin",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/keW8Hfo0.png",
@@ -1003,7 +1003,7 @@
     {
         "id": 190,
         "chinese_hero_name": "Kongming",
-        "english_hero_name": "Mastermind",
+        "english_hero_name": "",
         "roles": "Mage",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/XDnXeq3x.png",
@@ -1016,7 +1016,7 @@
     {
         "id": 191,
         "chinese_hero_name": "Da Qiao",
-        "english_hero_name": "Lanternlight",
+        "english_hero_name": "",
         "roles": "Support, Mage",
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/IEPtzR5z.png",
@@ -1029,7 +1029,7 @@
     {
         "id": 192,
         "chinese_hero_name": "Huang Zhong",
-        "english_hero_name": "Artillerist",
+        "english_hero_name": "",
         "roles": "Marksman",
         "recommended_lane": "Farm Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/LNECT7PW.png",
@@ -1042,7 +1042,7 @@
     {
         "id": 196,
         "chinese_hero_name": "Shouyue",
-        "english_hero_name": "Longshot",
+        "english_hero_name": "",
         "roles": "Marksman, Assassin",
         "recommended_lane": "Farm Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/4bUKKH66.png",
@@ -1055,7 +1055,7 @@
     {
         "id": 197,
         "chinese_hero_name": "Yixing",
-        "english_hero_name": "Boardmaster",
+        "english_hero_name": "",
         "roles": "Mage",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/RLA5jvBk.png",
@@ -1068,7 +1068,7 @@
     {
         "id": 199,
         "chinese_hero_name": "Arli",
-        "english_hero_name": "Parasola",
+        "english_hero_name": "",
         "roles": "Marksman",
         "recommended_lane": "Farm Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/hF8AFVqh.png",
@@ -1081,7 +1081,7 @@
     {
         "id": 534,
         "chinese_hero_name": "Sakeer",
-        "english_hero_name": "Brushstrider",
+        "english_hero_name": "",
         "roles": "Support, Mage",
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/ionwVFtV.png",
@@ -1094,7 +1094,7 @@
     {
         "id": 501,
         "chinese_hero_name": "Ming",
-        "english_hero_name": "Star Teller",
+        "english_hero_name": "",
         "roles": "Support",
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/ubeT1R84.png",
@@ -1107,7 +1107,7 @@
     {
         "id": 502,
         "chinese_hero_name": "Pei",
-        "english_hero_name": "Tigerous",
+        "english_hero_name": "",
         "roles": "Assassin",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/XlRczGYM.png",
@@ -1120,7 +1120,7 @@
     {
         "id": 504,
         "chinese_hero_name": "Milady",
-        "english_hero_name": "Mechaboss",
+        "english_hero_name": "",
         "roles": "Mage",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/orlOit3f.png",
@@ -1133,7 +1133,7 @@
     {
         "id": 505,
         "chinese_hero_name": "Yaria",
-        "english_hero_name": "Deerie",
+        "english_hero_name": "",
         "roles": "Support",
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/uHnzeJbu.png",
@@ -1146,7 +1146,7 @@
     {
         "id": 506,
         "chinese_hero_name": "Cirrus",
-        "english_hero_name": "Razorwing",
+        "english_hero_name": "",
         "roles": "Assassin",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/bwygx1aS.png",
@@ -1159,7 +1159,7 @@
     {
         "id": 507,
         "chinese_hero_name": "Li Xin",
-        "english_hero_name": "Vengeance",
+        "english_hero_name": "",
         "roles": "Fighter",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/mWSBbpVr.png",
@@ -1172,7 +1172,7 @@
     {
         "id": 508,
         "chinese_hero_name": "Garo",
-        "english_hero_name": "Piercing Arrow",
+        "english_hero_name": "",
         "roles": "Marksman",
         "recommended_lane": "Farm Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/g0jHNDf6.png",
@@ -1185,7 +1185,7 @@
     {
         "id": 510,
         "chinese_hero_name": "Sun Ce",
-        "english_hero_name": "Seafarer",
+        "english_hero_name": "",
         "roles": "Fighter, Tank",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/Te1nmDGP.png",
@@ -1198,7 +1198,7 @@
     {
         "id": 513,
         "chinese_hero_name": "Shangguan",
-        "english_hero_name": "Calligrapher",
+        "english_hero_name": "",
         "roles": "Mage, Assassin",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/zyA68GFr.png",
@@ -1211,7 +1211,7 @@
     {
         "id": 646,
         "chinese_hero_name": "Butterfly",
-        "english_hero_name": "Death's Whisper",
+        "english_hero_name": "",
         "roles": "Fighter",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/camp/admin/hero/head_128-128/FPq2P4ew.png",
@@ -1224,7 +1224,7 @@
     {
         "id": 521,
         "chinese_hero_name": "Haya",
-        "english_hero_name": "Evernight Aspiration",
+        "english_hero_name": "",
         "roles": "Mage",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/iIdXNhQ5.png",
@@ -1237,7 +1237,7 @@
     {
         "id": 523,
         "chinese_hero_name": "Shi",
-        "english_hero_name": "Silkweaver",
+        "english_hero_name": "",
         "roles": "Mage",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/MjBadKpJ.png",
@@ -1250,7 +1250,7 @@
     {
         "id": 524,
         "chinese_hero_name": "Meng Ya",
-        "english_hero_name": "Loose Cannon",
+        "english_hero_name": "",
         "roles": "Marksman",
         "recommended_lane": "Farm Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/vhBTA9jh.png",
@@ -1263,7 +1263,7 @@
     {
         "id": 528,
         "chinese_hero_name": "Lam",
-        "english_hero_name": "Stealthfin",
+        "english_hero_name": "",
         "roles": "Assassin, Fighter",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/02i6M2YK.png",
@@ -1276,7 +1276,7 @@
     {
         "id": 531,
         "chinese_hero_name": "Jing",
-        "english_hero_name": "Broken Mirage",
+        "english_hero_name": "",
         "roles": "Assassin",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/HVRw4cpB.png",
@@ -1289,7 +1289,7 @@
     {
         "id": 536,
         "chinese_hero_name": "Charlotte",
-        "english_hero_name": "Rose Fencer",
+        "english_hero_name": "",
         "roles": "Fighter",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/iIwO0Kwk.png",
@@ -1302,7 +1302,7 @@
     {
         "id": 538,
         "chinese_hero_name": "Ying",
-        "english_hero_name": "Firespear",
+        "english_hero_name": "",
         "roles": "Fighter, Assassin",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/diRuUQDV.png",
@@ -1315,7 +1315,7 @@
     {
         "id": 542,
         "chinese_hero_name": "Feyd",
-        "english_hero_name": "Featherfoot",
+        "english_hero_name": "",
         "roles": "Assassin",
         "recommended_lane": "Jungling",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/m8aOqFQE.png",
@@ -1328,7 +1328,7 @@
     {
         "id": 545,
         "chinese_hero_name": "Alessio",
-        "english_hero_name": "Red Hawk",
+        "english_hero_name": "",
         "roles": "Marksman",
         "recommended_lane": "Farm Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/nnafEHV0.png",
@@ -1341,7 +1341,7 @@
     {
         "id": 556,
         "chinese_hero_name": "Ata",
-        "english_hero_name": "White Anchor",
+        "english_hero_name": "",
         "roles": "Tank",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/eafz1moy.png",
@@ -1354,7 +1354,7 @@
     {
         "id": 172,
         "chinese_hero_name": "Chicha",
-        "english_hero_name": "Forge Maiden",
+        "english_hero_name": "",
         "roles": "Fighter",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/camp/admin/hero/head_128-128/lkU98jAV.png",
@@ -1367,7 +1367,7 @@
     {
         "id": 564,
         "chinese_hero_name": "Mayene",
-        "english_hero_name": "Martial Genius",
+        "english_hero_name": "",
         "roles": "Fighter",
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/FsGXCnH1.png",
@@ -1380,7 +1380,7 @@
     {
         "id": 159,
         "chinese_hero_name": "Dolia",
-        "english_hero_name": "Seasinger",
+        "english_hero_name": "",
         "roles": "Support",
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/camp/admin/hero/head_128-128/tfvb3IJf.png",
@@ -1393,7 +1393,7 @@
     {
         "id": 563,
         "chinese_hero_name": "Heino",
-        "english_hero_name": "Fateturner",
+        "english_hero_name": "",
         "roles": "Mage, Fighter",
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/camp/admin/hero/head_128-128/YO6iwLAg.jpg",
@@ -1406,7 +1406,7 @@
     {
         "id": 547,
         "chinese_hero_name": "Luara",
-        "english_hero_name": "Firesnake",
+        "english_hero_name": "",
         "roles": "Marksman",
         "recommended_lane": "Farm Lane",
         "image_url": "https://camp.honorofkings.com/camp/admin/hero/head_128-128/znRnu3kt.png",
@@ -1419,7 +1419,7 @@
     {
         "id": 519,
         "chinese_hero_name": "Ao'yin",
-        "english_hero_name": "Loong",
+        "english_hero_name": "",
         "roles": "Marksman",
         "recommended_lane": "Farm Lane",
         "image_url": "https://camp.honorofkings.com/camp/admin/hero/head_128-128/OzH2TSZN.jpg",
@@ -1432,7 +1432,7 @@
     {
         "id": 577,
         "chinese_hero_name": "Dyadia",
-        "english_hero_name": "Bondweaver",
+        "english_hero_name": "",
         "roles": "Support, Mage",
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/camp/admin/hero/head_128-128/Qdvu6qgO.png",
