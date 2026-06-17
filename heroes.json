@@ -1053,6 +1053,19 @@
         "ban_rate": "0.09%"
     },
     {
+        "id": 640,
+        "chinese_hero_name": "Annette",
+        "english_hero_name": "",
+        "roles": "Support, Mage",
+        "recommended_lane": "Roaming",
+        "image_url": "https://camp.honorofkings.com/camp/admin/hero/head_128-128/49o0xBua.png",
+        "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=640",
+        "popularity": "N/A",
+        "win_rate": "0.00%",
+        "pick_rate": "0.00%",
+        "ban_rate": "0.00%"
+    },
+    {
         "id": 197,
         "chinese_hero_name": "Yixing",
         "english_hero_name": "Boardmaster",
@@ -1300,6 +1313,19 @@
         "ban_rate": "0.07%"
     },
     {
+        "id": 537,
+        "chinese_hero_name": "Devara",
+        "english_hero_name": "",
+        "roles": "Fighter, Mage",
+        "recommended_lane": "Clash Lane",
+        "image_url": "https://camp.honorofkings.com/camp/admin/default/MagzAk8i.png",
+        "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=537",
+        "popularity": "N/A",
+        "win_rate": "0.00%",
+        "pick_rate": "0.00%",
+        "ban_rate": "0.00%"
+    },
+    {
         "id": 538,
         "chinese_hero_name": "Ying",
         "english_hero_name": "Firespear",
@@ -1376,6 +1402,32 @@
         "win_rate": "48.46%",
         "pick_rate": "0.56%",
         "ban_rate": "0.09%"
+    },
+    {
+        "id": 631,
+        "chinese_hero_name": "Florentino",
+        "english_hero_name": "",
+        "roles": "Fighter",
+        "recommended_lane": "Clash Lane",
+        "image_url": "https://camp.honorofkings.com/camp/admin/hero/head_128-128/skJXGWLF.png",
+        "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=631",
+        "popularity": "N/A",
+        "win_rate": "0.00%",
+        "pick_rate": "0.00%",
+        "ban_rate": "0.00%"
+    },
+    {
+        "id": 635,
+        "chinese_hero_name": "Lorion",
+        "english_hero_name": "",
+        "roles": "Mage",
+        "recommended_lane": "Mid Lane",
+        "image_url": "https://camp.honorofkings.com/camp/admin/hero/head_128-128/UDiFFfId.png",
+        "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=635",
+        "popularity": "N/A",
+        "win_rate": "0.00%",
+        "pick_rate": "0.00%",
+        "ban_rate": "0.00%"
     },
     {
         "id": 159,
