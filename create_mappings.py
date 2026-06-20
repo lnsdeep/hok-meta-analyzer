@@ -112,7 +112,11 @@ mappings = {
     "Xiao Qiao": "Breezeheart",
     "Jing": "Broken Mirage",
     "Sakeer": "Brushstrider",
-    "Shangguan": "Calligrapher"
+    "Shangguan": "Calligrapher",
+    "Devara": "Thunderous Deep",
+    "Annette": "Diviner",
+    "Florentino": "Gentle Blade",
+    "Lorion": "Nightmare Incarnate"
 }
 
 with open("hero_mappings.csv", "w", newline="", encoding="utf-8-sig") as f:
