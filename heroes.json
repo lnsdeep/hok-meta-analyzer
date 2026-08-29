@@ -905,9 +905,9 @@
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/E39kxNsD.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=179",
         "popularity": "A",
-        "win_rate": "53.91%",
-        "pick_rate": "1.04%",
-        "ban_rate": "0.60%"
+        "win_rate": "53.46%",
+        "pick_rate": "1.01%",
+        "ban_rate": "0.58%"
     },
     {
         "id": 183,
@@ -943,10 +943,10 @@
         "recommended_lane": "Roaming",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/kQXkW7ab.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=184",
-        "popularity": "S",
-        "win_rate": "51.16%",
-        "pick_rate": "1.19%",
-        "ban_rate": "2.36%"
+        "popularity": "A",
+        "win_rate": "51.07%",
+        "pick_rate": "1.23%",
+        "ban_rate": "2.30%"
     },
     {
         "id": 198,
@@ -970,9 +970,9 @@
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/PRcq49iS.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=187",
         "popularity": "A",
-        "win_rate": "48.22%",
-        "pick_rate": "0.73%",
-        "ban_rate": "2.45%"
+        "win_rate": "48.39%",
+        "pick_rate": "0.74%",
+        "ban_rate": "2.48%"
     },
     {
         "id": 189,
@@ -983,9 +983,9 @@
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/AXjJlMvi.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=189",
         "popularity": "C",
-        "win_rate": "52.60%",
-        "pick_rate": "0.21%",
-        "ban_rate": "0.20%"
+        "win_rate": "51.43%",
+        "pick_rate": "0.20%",
+        "ban_rate": "0.19%"
     },
     {
         "id": 195,
@@ -1035,8 +1035,8 @@
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/LNECT7PW.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=192",
         "popularity": "C",
-        "win_rate": "51.16%",
-        "pick_rate": "0.42%",
+        "win_rate": "51.17%",
+        "pick_rate": "0.43%",
         "ban_rate": "0.02%"
     },
     {
@@ -1048,8 +1048,8 @@
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/4bUKKH66.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=196",
         "popularity": "B",
-        "win_rate": "50.33%",
-        "pick_rate": "0.93%",
+        "win_rate": "50.31%",
+        "pick_rate": "0.95%",
         "ban_rate": "0.11%"
     },
     {
@@ -1074,9 +1074,9 @@
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/RLA5jvBk.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=197",
         "popularity": "C",
-        "win_rate": "51.27%",
-        "pick_rate": "0.61%",
-        "ban_rate": "0.02%"
+        "win_rate": "51.22%",
+        "pick_rate": "0.64%",
+        "ban_rate": "0.03%"
     },
     {
         "id": 199,
@@ -1126,8 +1126,8 @@
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/XlRczGYM.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=502",
         "popularity": "C",
-        "win_rate": "51.42%",
-        "pick_rate": "0.27%",
+        "win_rate": "51.47%",
+        "pick_rate": "0.28%",
         "ban_rate": "0.06%"
     },
     {
@@ -1139,9 +1139,9 @@
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/orlOit3f.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=504",
         "popularity": "S",
-        "win_rate": "47.74%",
-        "pick_rate": "1.67%",
-        "ban_rate": "1.93%"
+        "win_rate": "47.68%",
+        "pick_rate": "1.66%",
+        "ban_rate": "1.91%"
     },
     {
         "id": 505,
@@ -1230,9 +1230,9 @@
         "image_url": "https://camp.honorofkings.com/camp/admin/hero/head_128-128/FPq2P4ew.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=646",
         "popularity": "C",
-        "win_rate": "50.71%",
-        "pick_rate": "0.54%",
-        "ban_rate": "0.08%"
+        "win_rate": "51.77%",
+        "pick_rate": "0.53%",
+        "ban_rate": "0.07%"
     },
     {
         "id": 521,
@@ -1243,9 +1243,9 @@
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/iIdXNhQ5.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=521",
         "popularity": "S",
-        "win_rate": "48.34%",
-        "pick_rate": "1.28%",
-        "ban_rate": "2.26%"
+        "win_rate": "48.13%",
+        "pick_rate": "1.27%",
+        "ban_rate": "2.37%"
     },
     {
         "id": 523,
@@ -1255,10 +1255,10 @@
         "recommended_lane": "Mid Lane",
         "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/MjBadKpJ.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=523",
-        "popularity": "B",
-        "win_rate": "51.81%",
-        "pick_rate": "0.77%",
-        "ban_rate": "0.32%"
+        "popularity": "A",
+        "win_rate": "51.82%",
+        "pick_rate": "1.11%",
+        "ban_rate": "0.47%"
     },
     {
         "id": 524,
@@ -1320,10 +1320,10 @@
         "recommended_lane": "Clash Lane",
         "image_url": "https://camp.honorofkings.com/camp/admin/default/MagzAk8i.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=537",
-        "popularity": "A",
-        "win_rate": "49.55%",
-        "pick_rate": "1.14%",
-        "ban_rate": "0.33%"
+        "popularity": "B",
+        "win_rate": "49.12%",
+        "pick_rate": "1.13%",
+        "ban_rate": "0.32%"
     },
     {
         "id": 538,
@@ -1438,9 +1438,9 @@
         "image_url": "https://camp.honorofkings.com/camp/admin/hero/head_128-128/tfvb3IJf.png",
         "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=159",
         "popularity": "A",
-        "win_rate": "46.58%",
-        "pick_rate": "1.77%",
-        "ban_rate": "0.67%"
+        "win_rate": "46.54%",
+        "pick_rate": "1.98%",
+        "ban_rate": "0.74%"
     },
     {
         "id": 563,
