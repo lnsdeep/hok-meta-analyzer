@@ -27,7 +27,6 @@
 123,Lu Bu,Unrivaled Warrior,"Fighter, Tank",Clash Lane,https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/dXLF2kE7.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=123,A,48.92%,1.12%,0.33%
 126,Dun,Belligerence,"Tank, Fighter",Clash Lane,https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/23rrkYYy.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=126,A,52.85%,1.63%,0.57%
 127,Lady Zhen,Cascada,Mage,Mid Lane,https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/gqPEOybC.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=127,B,50.77%,1.02%,0.04%
-182,Gan & Mo,Smith and Blade,Mage,Mid Lane,https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/ui5UKQex.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=182,C,49.87%,0.40%,0.08%
 128,Fatih,Mighty Conqueror,Fighter,Clash Lane,https://camp.honorofkings.com/camp/admin/default/6IY77h7c.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=128,C,52.57%,0.42%,0.06%
 129,Dian Wei,Berserker,Fighter,Jungling,https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/y6IMFSlI.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=129,B,50.47%,0.97%,0.62%
 130,Musashi,Swordmaster,"Fighter, Assassin",Jungling,https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/jgvSlz3u.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=130,B,48.80%,0.94%,0.33%
@@ -69,6 +68,7 @@
 177,Chano,Packleader,Marksman,Farm Lane,https://camp.honorofkings.com/camp/admin/default/sJURXorM.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=177,B,50.87%,0.78%,0.06%
 503,Biron,Sparkmace,"Fighter, Tank",Clash Lane,https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/F3A0JkoT.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=503,B,47.75%,0.67%,0.19%
 179,Nuwa,Celestial,Mage,Mid Lane,https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/E39kxNsD.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=179,A,53.77%,1.02%,0.57%
+182,Gan & Mo,Smith and Blade,Mage,Mid Lane,https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/ui5UKQex.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=182,C,49.87%,0.40%,0.08%
 183,Athena,Sacred Warrior,"Fighter, Assassin",Jungling,https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/BEh6QC3Q.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=183,C,52.12%,0.07%,0.00%
 193,Kaizer,Demonplate,"Fighter, Tank",Clash Lane,https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/xUdtJiLO.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=193,A,50.87%,1.38%,0.12%
 184,Cai Yan,Healing Tone,Support,Roaming,https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/kQXkW7ab.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=184,S,51.20%,1.24%,2.26%
@@ -115,3 +115,5 @@
 519,Ao'yin,Loong,Marksman,Farm Lane,https://camp.honorofkings.com/camp/admin/hero/head_128-128/OzH2TSZN.jpg,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=519,S,49.54%,1.59%,3.16%
 577,Dyadia,Bondweaver,"Support, Mage",Roaming,https://camp.honorofkings.com/camp/admin/hero/head_128-128/Qdvu6qgO.png,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=577,A,48.58%,1.02%,1.32%
 582,Flowborn (Mage),Arcane Heart,Mage,Mid Lane,https://camp.honorofkings.com/camp/admin/hero/head_128-128/66xErXNs.jpeg,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=582,C,51.35%,0.43%,0.04%
+583,Flowborn (Assassin),,Assassin,Jungling,,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=583,N/A,0.00%,0.00%,0.00%
+585,Flowborn (Roamer),,"Support, Mage",Roaming,,https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=585,N/A,0.00%,0.00%,0.00%

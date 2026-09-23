@@ -364,19 +364,6 @@
         "ban_rate": "0.04%"
     },
     {
-        "id": 182,
-        "chinese_hero_name": "Gan & Mo",
-        "english_hero_name": "Smith and Blade",
-        "roles": "Mage",
-        "recommended_lane": "Mid Lane",
-        "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/ui5UKQex.png",
-        "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=182",
-        "popularity": "C",
-        "win_rate": "49.87%",
-        "pick_rate": "0.40%",
-        "ban_rate": "0.08%"
-    },
-    {
         "id": 128,
         "chinese_hero_name": "Fatih",
         "english_hero_name": "Mighty Conqueror",
@@ -908,6 +895,19 @@
         "win_rate": "53.77%",
         "pick_rate": "1.02%",
         "ban_rate": "0.57%"
+    },
+    {
+        "id": 182,
+        "chinese_hero_name": "Gan & Mo",
+        "english_hero_name": "Smith and Blade",
+        "roles": "Mage",
+        "recommended_lane": "Mid Lane",
+        "image_url": "https://camp.honorofkings.com/social/game/src/image_hero_head_128*128/ui5UKQex.png",
+        "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=182",
+        "popularity": "C",
+        "win_rate": "49.87%",
+        "pick_rate": "0.40%",
+        "ban_rate": "0.08%"
     },
     {
         "id": 183,
@@ -1506,5 +1506,31 @@
         "win_rate": "51.35%",
         "pick_rate": "0.43%",
         "ban_rate": "0.04%"
+    },
+    {
+        "id": 583,
+        "chinese_hero_name": "Flowborn (Assassin)",
+        "english_hero_name": "",
+        "roles": "Assassin",
+        "recommended_lane": "Jungling",
+        "image_url": "",
+        "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=583",
+        "popularity": "N/A",
+        "win_rate": "0.00%",
+        "pick_rate": "0.00%",
+        "ban_rate": "0.00%"
+    },
+    {
+        "id": 585,
+        "chinese_hero_name": "Flowborn (Roamer)",
+        "english_hero_name": "",
+        "roles": "Support, Mage",
+        "recommended_lane": "Roaming",
+        "image_url": "",
+        "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=585",
+        "popularity": "N/A",
+        "win_rate": "0.00%",
+        "pick_rate": "0.00%",
+        "ban_rate": "0.00%"
     }
 ]
