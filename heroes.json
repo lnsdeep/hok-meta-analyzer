@@ -442,6 +442,19 @@
         "ban_rate": "0.30%"
     },
     {
+        "id": 138,
+        "chinese_hero_name": "Wang Wei",
+        "english_hero_name": "",
+        "roles": "Mage",
+        "recommended_lane": "Mid Lane",
+        "image_url": "",
+        "hero_page_url": "https://camp.honorofkings.com/h5/app/index.html#/hero-detail?heroId=138",
+        "popularity": "N/A",
+        "win_rate": "0.00%",
+        "pick_rate": "0.00%",
+        "ban_rate": "0.00%"
+    },
+    {
         "id": 558,
         "chinese_hero_name": "Umbrosa",
         "english_hero_name": "Nightplume",
